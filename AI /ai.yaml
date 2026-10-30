@@ -117,8 +117,21 @@ payload:
 - DOMAIN,app.adjust.com
 
 # ==============================================================================
-# 4. АВТОРИЗАЦИЯ И ИДЕНТИФИКАЦИЯ (AUTH0, CLERK, SUPABASE, WORKOS)
+# 4. АВТОРИЗАЦИЯ, АККАУНТЫ И SSO (GOOGLE / MICROSOFT / AUTH0 / CLERK)
 # ==============================================================================
+# Google Accounts & OAuth (для Antigravity, Gemini и входа через Google)
+- DOMAIN,accounts.google.com
+- DOMAIN,myaccount.google.com
+- DOMAIN,oauth2.googleapis.com
+- DOMAIN,identitytoolkit.googleapis.com
+- DOMAIN,passkeys.google.com
+- DOMAIN,apis.google.com
+
+# Microsoft Live / Azure SSO (для Copilot и входа в OpenAI через MS)
+- DOMAIN,login.microsoftonline.com
+- DOMAIN,login.live.com
+
+# Специализированные AI провайдеры аутентификации
 - DOMAIN-SUFFIX,auth0.com
 - DOMAIN,cdn.auth0.com
 - DOMAIN-SUFFIX,clerk.com
@@ -163,7 +176,10 @@ payload:
 # 7. GOOGLE AI / ANTIGRAVITY / CLOUD CODE ASSIST / GEMINI / DEEPMIND
 # ==============================================================================
 # Google Antigravity & Gemini Code Assist (IDE / генерация кода)
+- DOMAIN-KEYWORD,antigravity
+- DOMAIN-KEYWORD,cloudcode
 - DOMAIN-SUFFIX,antigravity.google
+- DOMAIN-SUFFIX,antigravity.goog
 - DOMAIN-SUFFIX,antigravity-unleash.goog
 - DOMAIN,antigravity-pa.googleapis.com
 - DOMAIN,antigravity.googleapis.com
@@ -171,6 +187,7 @@ payload:
 - DOMAIN,cloudcode-pa.googleapis.com
 - DOMAIN,daily-cloudcode-pa.googleapis.com
 - DOMAIN,aicode.googleapis.com
+- DOMAIN-SUFFIX,instantmessaging-pa.googleapis.com
 
 # IAM, валидация токенов и сервисные API Google Cloud для Antigravity
 - DOMAIN,cloudresourcemanager.googleapis.com
