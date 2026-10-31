@@ -9,6 +9,11 @@ payload:
 - DOMAIN-SUFFIX,ip-api.com
 - DOMAIN-SUFFIX,ipdata.co
 - DOMAIN-SUFFIX,extreme-ip-lookup.com
+- DOMAIN-SUFFIX,icanhazip.com
+- DOMAIN-SUFFIX,ifconfig.me
+- DOMAIN-SUFFIX,ifconfig.co
+- DOMAIN-SUFFIX,ip.sb
+- DOMAIN,api.ip.sb
 
 # ==============================================================================
 # 2. АНТИ-ДЕТЕКТ, БРАУЗЕРНЫЙ ФИНГЕРПРИНТ, CAPTCHA И ВЕРИФИКАЦИЯ
@@ -37,6 +42,7 @@ payload:
 - DOMAIN-SUFFIX,arkoselabs.com
 - DOMAIN,client-api.arkoselabs.com
 - DOMAIN,tcr9i.chat.openai.com
+- DOMAIN,openai-api.arkoselabs.com
 
 # Вспомогательные капчи
 - DOMAIN-SUFFIX,hcaptcha.com
@@ -68,10 +74,11 @@ payload:
 - DOMAIN,session-replay.datadoghq.com
 - DOMAIN,http-intake.logs.datadoghq.com
 
-# Sentry Ingest (сбор фронтенд-ошибок Claude и ChatGPT)
+# Sentry Ingest & SDK CDN (сбор фронтенд-ошибок Claude и ChatGPT)
 - DOMAIN-SUFFIX,sentry.io
 - DOMAIN-SUFFIX,ingest.sentry.io
 - DOMAIN-SUFFIX,ingest.us.sentry.io
+- DOMAIN,browser.sentry-cdn.com
 
 # Fathom Analytics (обязателен для рендеринга страницы Claude AI)
 - DOMAIN,cdn.usefathom.com
@@ -117,7 +124,7 @@ payload:
 - DOMAIN,app.adjust.com
 
 # ==============================================================================
-# 4. АВТОРИЗАЦИЯ, АККАУНТЫ И SSO (GOOGLE / MICROSOFT / AUTH0 / CLERK)
+# 4. АВТОРИЗАЦИЯ, АККАУНТЫ И SSO (GOOGLE / MICROSOFT / APPLE / AUTH0)
 # ==============================================================================
 # Google Accounts & OAuth (для Antigravity, Gemini и входа через Google)
 - DOMAIN,accounts.google.com
@@ -131,6 +138,9 @@ payload:
 - DOMAIN,login.microsoftonline.com
 - DOMAIN,login.live.com
 
+# Apple ID (для входа через «Sign in with Apple»)
+- DOMAIN,appleid.apple.com
+
 # Специализированные AI провайдеры аутентификации
 - DOMAIN-SUFFIX,auth0.com
 - DOMAIN,cdn.auth0.com
@@ -141,8 +151,7 @@ payload:
 - DOMAIN-SUFFIX,workos.com
 
 # ==============================================================================
-# 5. WEBRTC, ГОЛОСОВЫЕ РЕЖИМЫ (ADVANCED VOICE) И LIVEKIT
-# Предотвращает утечку публичного IP по UDP и сброс голосовых сессий
+# 5. WEBRTC, ГОЛОСОВЫЕ РЕЖИМЫ (ADVANCED VOICE), LIVEKIT И СИНТЕЗ
 # ==============================================================================
 # LiveKit Cloud (WebRTC-инфраструктура реального времени для OpenAI Voice)
 - DOMAIN-SUFFIX,livekit.cloud
@@ -159,6 +168,9 @@ payload:
 - DOMAIN,stun2.l.google.com
 - DOMAIN,stun3.l.google.com
 - DOMAIN,stun4.l.google.com
+
+# Deepgram (голосовые AI-агенты)
+- DOMAIN-SUFFIX,deepgram.com
 
 # ==============================================================================
 # 6. ANTHROPIC / CLAUDE AI
@@ -207,6 +219,7 @@ payload:
 - DOMAIN-SUFFIX,generativeai.google
 - DOMAIN-SUFFIX,ai.google.dev
 - DOMAIN-SUFFIX,ai.google
+- DOMAIN-SUFFIX,ai.google.com
 - DOMAIN-SUFFIX,jules.google
 - DOMAIN-SUFFIX,jules.google.com
 - DOMAIN-SUFFIX,labs.google
@@ -217,9 +230,11 @@ payload:
 - DOMAIN,stitch.withgoogle.com
 - DOMAIN,musicfx.withgoogle.com
 - DOMAIN,textfx.withgoogle.com
+- DOMAIN,g.co
 
 # Бэкенды и инфраструктура Google AI
 - DOMAIN,generativelanguage.googleapis.com
+- DOMAIN,content-generativelanguage.googleapis.com
 - DOMAIN,alkalimakersuite-pa.googleapis.com
 - DOMAIN,alkalimakersuite-pa.clients6.google.com
 - DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
@@ -239,6 +254,8 @@ payload:
 # 8. OPENAI / CHATGPT / SORA
 # ==============================================================================
 - DOMAIN-SUFFIX,chatgpt.com
+- DOMAIN-SUFFIX,chat.com
+- DOMAIN-SUFFIX,ai.com
 - DOMAIN-SUFFIX,chatgpt.site
 - DOMAIN-SUFFIX,oaistatic.com
 - DOMAIN-SUFFIX,oaiusercontent.com
@@ -251,6 +268,10 @@ payload:
 - DOMAIN-SUFFIX,sora.com
 - DOMAIN-SUFFIX,searchgpt.com
 - DOMAIN,operator.chatgpt.com
+# Хранилища ассетов и моделей OpenAI
+- DOMAIN,openaicom.imgix.net
+- DOMAIN,production-openaicom-storage.azureedge.net
+- DOMAIN,openaicomproductionae4b.blob.core.windows.net
 
 # ==============================================================================
 # 9. MICROSOFT / GITHUB COPILOT
@@ -285,8 +306,9 @@ payload:
 - DOMAIN,d.docs.live.net
 
 # ==============================================================================
-# 10. CURSOR & ANYSPHERE (AI IDE)
+# 10. AI IDE И РЕДАКТОРЫ КОДА (CURSOR / WINDSURF)
 # ==============================================================================
+# Cursor AI & Anysphere
 - DOMAIN-SUFFIX,cursor.sh
 - DOMAIN-SUFFIX,cursor.com
 - DOMAIN-SUFFIX,cursorapi.com
@@ -297,9 +319,23 @@ payload:
 - DOMAIN,marketplace.cursorapi.com
 - DOMAIN,telemetry.cursor.sh
 
+# Windsurf & Codeium (главный аналог Cursor)
+- DOMAIN-SUFFIX,codeium.com
+- DOMAIN-SUFFIX,windsurf.ai
+
 # ==============================================================================
-# 11. ДРУГИЕ ИИ-СЕРВИСЫ
+# 11. ДРУГИЕ ИИ-СЕРВИСЫ, АГРЕГАТОРЫ И ГЕНЕРАТОРЫ
 # ==============================================================================
+# OpenRouter (шлюз всех ИИ для разработчиков и IDE)
+- DOMAIN-SUFFIX,openrouter.ai
+
+# Платформы генерации приложений (Full-stack AI)
+- DOMAIN-SUFFIX,bolt.new
+- DOMAIN-SUFFIX,lovable.dev
+- DOMAIN-SUFFIX,replit.com
+- DOMAIN-SUFFIX,replit.dev
+- DOMAIN-SUFFIX,v0.dev
+
 # Perplexity AI
 - DOMAIN-SUFFIX,perplexity.ai
 - DOMAIN-SUFFIX,pplx.ai
@@ -319,32 +355,42 @@ payload:
 - DOMAIN,api.deepseek.com
 - DOMAIN,files.deepseeksvc.com
 
-# Генерация контента и инференс
+# Генерация медиа (Видео, Картинки, Музыка)
 - DOMAIN-SUFFIX,midjourney.com
-- DOMAIN-SUFFIX,replicate.com
-- DOMAIN-SUFFIX,replicate.delivery
-- DOMAIN-SUFFIX,stability.ai
-- DOMAIN-SUFFIX,suno.com
-- DOMAIN-SUFFIX,suno.ai
-- DOMAIN-SUFFIX,udio.com
+- DOMAIN-SUFFIX,klingai.com
+- DOMAIN-SUFFIX,klingai.org
+- DOMAIN-SUFFIX,ideogram.ai
+- DOMAIN-SUFFIX,leonardo.ai
+- DOMAIN-SUFFIX,pika.art
 - DOMAIN-SUFFIX,runwayml.com
 - DOMAIN-SUFFIX,runway.com
 - DOMAIN-SUFFIX,lumalabs.ai
 - DOMAIN-SUFFIX,blackforestlabs.ai
+- DOMAIN-SUFFIX,stability.ai
+- DOMAIN-SUFFIX,replicate.com
+- DOMAIN-SUFFIX,replicate.delivery
+- DOMAIN-SUFFIX,suno.com
+- DOMAIN-SUFFIX,suno.ai
+- DOMAIN-SUFFIX,udio.com
+
+# Платформы моделей, торрент-зеркала и инференс
 - DOMAIN-SUFFIX,huggingface.co
 - DOMAIN-SUFFIX,hf.co
 - DOMAIN-SUFFIX,hf.space
+- DOMAIN-SUFFIX,pirateface.co
 - DOMAIN-SUFFIX,mistral.ai
 - DOMAIN-SUFFIX,groq.com
+- DOMAIN-SUFFIX,together.ai
+- DOMAIN-SUFFIX,together.xyz
+- DOMAIN-SUFFIX,fireworks.ai
 - DOMAIN-SUFFIX,poe.com
 - DOMAIN-SUFFIX,poecdn.net
-- DOMAIN-SUFFIX,v0.dev
 - DOMAIN-SUFFIX,warp.dev
 - DOMAIN-SUFFIX,civitai.com
 - DOMAIN-SUFFIX,cohere.com
 - DOMAIN-SUFFIX,cohere.ai
 
-# Утилиты и продуктивность
+# Утилиты и продуктивность (включая Canva и Notion)
 - DOMAIN-SUFFIX,elevenlabs.io
 - DOMAIN,us-central1-xi-labs.cloudfunctions.net
 - DOMAIN-SUFFIX,deepl.com
