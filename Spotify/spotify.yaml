@@ -1,0 +1,89 @@
+payload:
+# ==============================================================================
+# SPOTIFY & HI-FI MUSIC MASTER RULESET
+# Включает: Spotify (все CDN, API, обложки, тексты, аудиопотоки), Tidal, Qobuz,
+# Deezer, SoundCloud, утилиты (SpotX, Spicetify) и музыкальные шортлинки.
+# ==============================================================================
+
+# ==============================================================================
+# 1. SPOTIFY: АВТОРИЗАЦИЯ, САЙТ И ССЫЛКИ
+# ==============================================================================
+- DOMAIN-SUFFIX,spotify.com
+- DOMAIN-SUFFIX,spoti.fi
+- DOMAIN-SUFFIX,spotify.link
+- DOMAIN-SUFFIX,spotify.app.link
+- DOMAIN-SUFFIX,byspotify.com
+- DOMAIN-SUFFIX,tospotify.com
+- DOMAIN-SUFFIX,spotify-everywhere.com
+- DOMAIN-SUFFIX,spotifycharts.com
+- DOMAIN-SUFFIX,spotifycodes.com
+- DOMAIN-SUFFIX,spotifyforbrands.com
+- DOMAIN-SUFFIX,spotifyjobs.com
+- DOMAIN-SUFFIX,spotilocal.com
+- DOMAIN-KEYWORD,spotify
+
+# ==============================================================================
+# 2. SPOTIFY: СЕРВЕРЫ АУДИОПОТОКОВ И CDN (МУЗЫКА И КЭШ)
+# ==============================================================================
+- DOMAIN-SUFFIX,scdn.co
+- DOMAIN-SUFFIX,pscdn.co
+- DOMAIN-SUFFIX,spotifycdn.com
+- DOMAIN-SUFFIX,spotifycdn.net
+- DOMAIN,audio-ak-spotify-com.akamaized.net
+- DOMAIN,audio4-ak-spotify-com.akamaized.net
+- DOMAIN,heads-ak-spotify-com.akamaized.net
+- DOMAIN,heads4-ak-spotify-com.akamaized.net
+- DOMAIN,spotify.com.edgesuite.net
+- DOMAIN,spotify.map.fastly.net
+- DOMAIN,spotify.map.fastlylb.net
+- DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
+- DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net
+- DOMAIN-SUFFIX,spotify-com.akamaized.net
+
+# ==============================================================================
+# 3. SPOTIFY: API, КЛИЕНТЫ, ТЕКСТЫ И CANVAS
+# ==============================================================================
+- DOMAIN,spclient.wg.spotify.com
+- DOMAIN,apresolve.spotify.com
+- DOMAIN,dealer.spotify.com
+- DOMAIN,canvas.spotify.com
+- DOMAIN,daily-mix.scdn.co
+- DOMAIN,lineup-images.scdn.co
+- DOMAIN,i.scdn.co
+- DOMAIN,b.scorecardresearch.com
+
+# ==============================================================================
+# 4. TIDAL (HI-FI АУДИО И МАСТЕР-КАЧЕСТВО)
+# ==============================================================================
+- DOMAIN-SUFFIX,tidal.com
+- DOMAIN-SUFFIX,tidalhifi.com
+- DOMAIN-SUFFIX,wimpmusic.com
+
+# ==============================================================================
+# 5. QOBUZ & DEEZER & SOUNDCLOUD
+# ==============================================================================
+- DOMAIN-SUFFIX,qobuz.com
+- DOMAIN-SUFFIX,qobuz.net
+- DOMAIN-KEYWORD,qobuz
+- DOMAIN-SUFFIX,deezer.com
+- DOMAIN-SUFFIX,dzcdn.net
+- DOMAIN-SUFFIX,soundcloud.com
+- DOMAIN-SUFFIX,sndcdn.com
+
+# ==============================================================================
+# 6. УТИЛИТЫ, БЛОКИРОВЩИКИ РЕКЛАМЫ И МОДИФИКАЦИИ
+# ==============================================================================
+- DOMAIN-KEYWORD,spotbye
+- DOMAIN-KEYWORD,spicetify
+- DOMAIN-KEYWORD,spotx
+- DOMAIN-SUFFIX,ipwho.is
+- DOMAIN-KEYWORD,ipwho
+
+# ==============================================================================
+# 7. АГРЕГАТОРЫ И МУЗЫКАЛЬНЫЙ ШЕРИНГ (SONGLINK / ODESLI)
+# ==============================================================================
+- DOMAIN-SUFFIX,song.link
+- DOMAIN-SUFFIX,odesli.co
+- DOMAIN-SUFFIX,album.link
+- DOMAIN-SUFFIX,artist.link
+- DOMAIN-SUFFIX,pods.link
