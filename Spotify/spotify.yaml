@@ -1,8 +1,8 @@
 payload:
 # ==============================================================================
-# SPOTIFY & HI-FI MUSIC MASTER RULESET
-# Включает: Spotify (все CDN, API, обложки, тексты, аудиопотоки), Tidal, Qobuz,
-# Deezer, SoundCloud, утилиты (SpotX, Spicetify) и музыкальные шортлинки.
+# SPOTIFY & ALL MUSIC SERVICES MASTER RULESET
+# Полный комплект: Spotify (все CDN, API, аудиопотоки), Tidal, Qobuz, Deezer,
+# SoundCloud, Last.fm, MusicBrainz, утилиты (SpotX, Spicetify) и шортлинки.
 # ==============================================================================
 
 # ==============================================================================
@@ -19,6 +19,7 @@ payload:
 - DOMAIN-SUFFIX,spotifycodes.com
 - DOMAIN-SUFFIX,spotifyforbrands.com
 - DOMAIN-SUFFIX,spotifyjobs.com
+- DOMAIN-SUFFIX,spotify.design
 - DOMAIN-SUFFIX,spotilocal.com
 - DOMAIN-KEYWORD,spotify
 
@@ -53,25 +54,40 @@ payload:
 - DOMAIN,b.scorecardresearch.com
 
 # ==============================================================================
-# 4. TIDAL (HI-FI АУДИО И МАСТЕР-КАЧЕСТВО)
+# 4. TIDAL (HI-FI АУДИО И ИЗ КОРНЕВОГО ПРАВИЛА TIDAL)
 # ==============================================================================
 - DOMAIN-SUFFIX,tidal.com
 - DOMAIN-SUFFIX,tidalhifi.com
 - DOMAIN-SUFFIX,wimpmusic.com
+- DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com
 
 # ==============================================================================
-# 5. QOBUZ & DEEZER & SOUNDCLOUD
+# 5. QOBUZ, DEEZER, SOUNDCLOUD (ИЗ ПРАВИЛА MUSIC)
 # ==============================================================================
+# Qobuz
 - DOMAIN-SUFFIX,qobuz.com
 - DOMAIN-SUFFIX,qobuz.net
 - DOMAIN-KEYWORD,qobuz
+
+# Deezer
 - DOMAIN-SUFFIX,deezer.com
 - DOMAIN-SUFFIX,dzcdn.net
+
+# SoundCloud
 - DOMAIN-SUFFIX,soundcloud.com
 - DOMAIN-SUFFIX,sndcdn.com
+- DOMAIN-SUFFIX,snd.sc
+- DOMAIN-SUFFIX,soundcloud.cloud
 
 # ==============================================================================
-# 6. УТИЛИТЫ, БЛОКИРОВЩИКИ РЕКЛАМЫ И МОДИФИКАЦИИ
+# 6. МЕТАДАННЫЕ И СКРОББЛИНГ (ИЗ ПРАВИЛА MUSIC)
+# ==============================================================================
+- DOMAIN-SUFFIX,last.fm
+- DOMAIN-SUFFIX,musicbrainz.org
+- DOMAIN-SUFFIX,metabrainz.org
+
+# ==============================================================================
+# 7. УТИЛИТЫ, БЛОКИРОВЩИКИ РЕКЛАМЫ И ПРОВЕРКА IP
 # ==============================================================================
 - DOMAIN-KEYWORD,spotbye
 - DOMAIN-KEYWORD,spicetify
@@ -80,7 +96,7 @@ payload:
 - DOMAIN-KEYWORD,ipwho
 
 # ==============================================================================
-# 7. АГРЕГАТОРЫ И МУЗЫКАЛЬНЫЙ ШЕРИНГ (SONGLINK / ODESLI)
+# 8. АГРЕГАТОРЫ И МУЗЫКАЛЬНЫЙ ШЕРИНГ (SONGLINK / ODESLI)
 # ==============================================================================
 - DOMAIN-SUFFIX,song.link
 - DOMAIN-SUFFIX,odesli.co
