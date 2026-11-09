@@ -131,7 +131,7 @@ payload:
   - DOMAIN,oauth2.googleapis.com
   - DOMAIN,identitytoolkit.googleapis.com
   - DOMAIN,passkeys.google.com
-  - DOMAIN,apis.google.co           m
+  - DOMAIN,apis.google.com
 
 # Microsoft Live / Azure SSO (для GitHub Copilot и входа в OpenAI через Microsoft)
   - DOMAIN,login.microsoftonline.com
@@ -172,6 +172,8 @@ payload:
   - DOMAIN,anthropic.gallerycdn.vsassets.io
   - DOMAIN-KEYWORD,anthropic
   - DOMAIN-KEYWORD,claude
+  - DOMAIN,storage.googleapis.com # (Опционально, если Claude Code не может обновиться сам)
+  - DOMAIN-SUFFIX,anthropic.statuspage.io
 
 # ==============================================================================
 # 8. GOOGLE AI / ANTIGRAVITY / CLOUD CODE ASSIST / GEMINI / DEEPMIND
