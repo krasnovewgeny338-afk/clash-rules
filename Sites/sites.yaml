@@ -274,14 +274,8 @@ payload:
   - DOMAIN-SUFFIX,box.com
 
 # ==============================================================================
-# 8. ЗАРУБЕЖНЫЕ СОЦСЕТИ, СООБЩЕСТВА И ЗНАКОМСТВА (REDDIT / PINTEREST / TINDER)
+# 8. ЗАРУБЕЖНЫЕ СОЦСЕТИ, СООБЩЕСТВА И ЗНАКОМСТВА (PINTEREST / TINDER)
 # ==============================================================================
-# Reddit (полный набор с CDN картинок и медиасерверами)
-  - DOMAIN-SUFFIX,reddit.com
-  - DOMAIN-SUFFIX,redditmedia.com
-  - DOMAIN-SUFFIX,redditstatic.com
-  - DOMAIN-SUFFIX,redd.it
-
 # Pinterest & Tumblr
   - DOMAIN-SUFFIX,pinterest.com
   - DOMAIN-SUFFIX,pinimg.com
