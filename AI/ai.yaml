@@ -263,6 +263,23 @@ payload:
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN-KEYWORD,openai
   - DOMAIN-KEYWORD,chatgpt
+  # --- КРИТИЧНО ДЛЯ СМЕНЫ АККАУНТА И АВТОРИЗАЦИИ OPENAI ---
+  - DOMAIN-SUFFIX,oaistatsig.com
+  - DOMAIN-SUFFIX,identrust.com
+  - DOMAIN,account.live.com
+  - DOMAIN-SUFFIX,crixet.com
+  # --- CLOUDFLARE И AZURE БЭКЕНДЫ / CDN OPENAI ---
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net
+  - DOMAIN,openai.com.cdn.cloudflare.net
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,openaiassets.blob.core.windows.net
+  - DOMAIN-SUFFIX,webpubsub.azure.com
+  # --- СЛУЖЕБНАЯ ТЕЛЕМЕТРИЯ СБОЕВ СЕССИЙ ---
+  - DOMAIN,openai.qualtrics.com
+  # -- ПРЯМЫЕ СЕРВЕРНЫЕ IP OPENAI (AS20473) ---
+  - IP-CIDR,24.199.123.28/32,no-resolve
+  - IP-CIDR,64.23.132.171/32,no-resolve
 
 # ==============================================================================
 # 10. MICROSOFT / GITHUB COPILOT / DESIGNER
