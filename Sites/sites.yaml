@@ -558,8 +558,6 @@ payload:
   - DOMAIN-SUFFIX,iherb.com
 
 # Файлообменники, пастбины и облачные хранилища
-  - DOMAIN-SUFFIX,mega.nz
-  - DOMAIN-SUFFIX,mega.io
   - DOMAIN-SUFFIX,pastebin.com
   - DOMAIN-SUFFIX,mediafire.com
   - DOMAIN-SUFFIX,rapidgator.net
