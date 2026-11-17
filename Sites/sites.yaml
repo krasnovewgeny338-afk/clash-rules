@@ -1,22 +1,5 @@
 payload:
 # ==============================================================================
-# SITES MASTER RULESET (ГРУППА "САЙТЫ" — ПОЛНЫЙ КОМПЛЕКТ СЕРВИСОВ И РЕСУРСОВ)
-# Исчерпывающий мастер-список для обхода блокировок всех категорий сайтов:
-# 0. Служебные IP-чекеры, геолокация и антифрод (Netflix, MS, Adobe, криптобиржи)
-# 1. Стриминги, онлайн-кинотеатры и аниме (Netflix, Crunchyroll, HDRezka, Kinopub)
-# 2. TikTok, ByteDance & CapCut (полный набор с эффектами и CDN)
-# 3. Microsoft (Windows Update, активация, Office 365, Teams, Azure)
-# 4. Adobe (Creative Cloud, Photoshop, Illustrator, лицензии и CDN)
-# 5. Autodesk (AutoCAD, 3ds Max, Maya, облако и активация)
-# 6. Разработка, IDE и вендоры софта (JetBrains, Docker, Oracle, Atlassian)
-# 7. Инструменты продуктивности и связь (Notion, Figma, Miro, Slack, Zoom, Proton)
-# 8. Зарубежные соцсети, сообщества и знакомства (Reddit, Pinterest, Bluesky, 4chan, Tinder)
-# 9. Железо, драйверы и производители ПК (Intel, AMD, Nvidia, ASUS, MSI, HP, Dell, Razer)
-# 10. Криптовалюты и финансы (Coinbase, Kraken, TradingView, BestChange, Bybit)
-# 11. Независимые СМИ, библиотеки (Флибуста, Libgen), статьи и блокировки РКН
-# 12. 18+ сервисы (Pornhub, xHamster, xVideos, XNXX, Beeg, Kemono)
-# 13. Ваши персональные домены и суффиксы
-# ==============================================================================
 # ==============================================================================
 # 0. СЛУЖЕБНЫЕ IP-ЧЕКЕРЫ, ГЕОЛОКАЦИЯ И АНТИФРОД ДЛЯ САЙТОВ И СТРИМИНГОВ
 # Точечные API, через которые сервисы из этого списка (Netflix, Microsoft, Adobe,
@@ -166,6 +149,7 @@ payload:
   - DOMAIN-SUFFIX,msocdn.com
   - DOMAIN-SUFFIX,visualstudio.com
   - DOMAIN-SUFFIX,windows.net
+  - DOMAIN-SUFFIX,copilot.microsoft.com
 # ==============================================================================
 # 4. ADOBE (CREATIVE CLOUD, PHOTOSHOP, ILLUSTRATOR, АКТИВАЦИЯ И CDN)
 # ==============================================================================
@@ -189,23 +173,44 @@ payload:
 # 6. РАЗРАБОТКА, IDE И ВЕНДОРЫ СОФТА (JETBRAINS, DOCKER, ORACLE, ATLASSIAN)
 # ==============================================================================
 # JetBrains (PyCharm, WebStorm, IDEA, CLion, Rider, DataGrip, плагины)
-  - DOMAIN-SUFFIX,datalore.io
-  - DOMAIN-SUFFIX,grazie.ai
-  - DOMAIN-SUFFIX,intellij.com
-  - DOMAIN-SUFFIX,intellij.net
-  - DOMAIN-SUFFIX,intellij.org
-  - DOMAIN-SUFFIX,jetbrains.ai
+  - DOMAIN-SUFFIX,jb.gg
+  - DOMAIN-SUFFIX,pycharm.com
   - DOMAIN-SUFFIX,jetbrains.com
+  - DOMAIN-SUFFIX,jetbrains.space
+  - DOMAIN-SUFFIX,jetbrains.ai
   - DOMAIN-SUFFIX,jetbrains.io
   - DOMAIN-SUFFIX,jetbrains.net
   - DOMAIN-SUFFIX,jetbrains.org
-  - DOMAIN-SUFFIX,jetbrains.space
   - DOMAIN-SUFFIX,jetbrains.team
-  - DOMAIN-SUFFIX,kotlinconf.com
+  - DOMAIN-SUFFIX,myjetbrains.com
+  - DOMAIN-SUFFIX,teamcity.com
+  - DOMAIN-SUFFIX,youtrack.com
+  - DOMAIN-SUFFIX,intellij.com
+  - DOMAIN-SUFFIX,intellij.net
+  - DOMAIN-SUFFIX,intellij.org
+  - DOMAIN-SUFFIX,datalore.io
+  - DOMAIN-SUFFIX,grazie.ai
+  - DOMAIN-SUFFIX,kotl.in
   - DOMAIN-SUFFIX,kotlinlang.org
+  - DOMAIN-SUFFIX,kotlinconf.com
+# Python & PyPI (для встроенного менеджера пакетов и загрузки Python в PyCharm)
+  - DOMAIN-SUFFIX,python.org
+  - DOMAIN-SUFFIX,pypi.org
+  - DOMAIN-SUFFIX,pypi.io
+  - DOMAIN-SUFFIX,pypa.io
+  - DOMAIN-SUFFIX,pythonhosted.org
+  - DOMAIN-SUFFIX,pycon.org
+  - DOMAIN-SUFFIX,anaconda.com
+  - DOMAIN-SUFFIX,anaconda.org
+  - DOMAIN-SUFFIX,conda.io
 # Docker & Реестры контейнеров
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,dockerhub.com
+  - DOMAIN-SUFFIX,compose-spec.io
+  - DOMAIN,d1q6f0aelx0por.cloudfront.net
+  - DOMAIN,d2wy8f7a9ursnm.cloudfront.net
+  - DOMAIN,d36jcksde1wxzq.cloudfront.net
 # Oracle, Java & VirtualBox
   - DOMAIN-SUFFIX,oracle.com
   - DOMAIN-SUFFIX,java.com
@@ -215,6 +220,9 @@ payload:
   - DOMAIN-SUFFIX,atlassian.net
   - DOMAIN-SUFFIX,trello.com
   - DOMAIN-SUFFIX,bitbucket.org
+  - DOMAIN-SUFFIX,trellocdn.com
+  - DOMAIN-SUFFIX,statuspage.io
+  - DOMAIN-SUFFIX,atl-paas.net
 # Git-хостинги и платформы разработки
   - DOMAIN-SUFFIX,gitlab.com
   - DOMAIN-SUFFIX,sourceforge.net
@@ -223,6 +231,9 @@ payload:
   - DOMAIN-SUFFIX,protonvpn.com
   - DOMAIN-SUFFIX,quay.io
   - DOMAIN-SUFFIX,gcr.io
+  - DOMAIN-SUFFIX,gitlab.net
+  - DOMAIN-SUFFIX,gitlab-static.net
+  - DOMAIN-SUFFIX,ghcr.io
 # ==============================================================================
 # 7. ИНСТРУМЕНТЫ ПРОДУКТИВНОСТИ И СВЯЗЬ (NOTION, FIGMA, MIRO, SLACK, ZOOM, PROTON)
 # ==============================================================================
@@ -244,11 +255,21 @@ payload:
   - DOMAIN-SUFFIX,zoom.us
   - DOMAIN-SUFFIX,zoomgov.com
   - DOMAIN-SUFFIX,canva.com
+  - DOMAIN-SUFFIX,slack-files.com
+  - DOMAIN-SUFFIX,slack-imgs.com
+  - DOMAIN-SUFFIX,slack-msgs.com
+  - DOMAIN-SUFFIX,slack-core.com
+  - DOMAIN-SUFFIX,slack-redir.net
+  - DOMAIN-SUFFIX,zoom.com
+  - DOMAIN-SUFFIX,zoomstatic.com
 # Proton & Безопасная почта
   - DOMAIN-SUFFIX,proton.me
   - DOMAIN-SUFFIX,protonmail.com
   - DOMAIN-SUFFIX,tuta.com
   - DOMAIN-SUFFIX,tutanota.com
+  - DOMAIN-SUFFIX,pm.me
+  - DOMAIN-SUFFIX,protonmail.ch
+  - DOMAIN-SUFFIX,protonstatus.com
 # Облачные хранилища
   - DOMAIN-SUFFIX,dropbox.com
   - DOMAIN-SUFFIX,dropboxstatic.com
@@ -388,7 +409,6 @@ payload:
   - DOMAIN-SUFFIX,tegrazone.com
   - DOMAIN-SUFFIX,tegrazone.jp
   - DOMAIN-SUFFIX,tegrazone.kr
-
 # ПК, ноутбуки и материнские платы (MSI, Acer, Lenovo, Gigabyte, ASRock)
   - DOMAIN-SUFFIX,msi.com
   - DOMAIN-SUFFIX,msi.com.tw
@@ -404,7 +424,6 @@ payload:
   - DOMAIN-SUFFIX,aorus.com
   - DOMAIN-SUFFIX,asrock.com
   - DOMAIN-SUFFIX,asrock.com.tw
-
 # Видеокарты (Palit, Gainward, Zotac, Inno3D, KFA2, Sapphire, PowerColor, XFX, EVGA)
   - DOMAIN-SUFFIX,palit.com
   - DOMAIN-SUFFIX,palit.biz
@@ -417,7 +436,6 @@ payload:
   - DOMAIN-SUFFIX,powercolor.com
   - DOMAIN-SUFFIX,xfxforce.com
   - DOMAIN-SUFFIX,evga.com
-
 # Память и SSD (Samsung, Kingston, Crucial, ADATA, TeamGroup, Kioxia, Transcend, Netac)
   - DOMAIN-SUFFIX,samsung.com
   - DOMAIN-SUFFIX,samsungsemiconductor.com
@@ -432,7 +450,6 @@ payload:
   - DOMAIN-SUFFIX,kioxia.com
   - DOMAIN-SUFFIX,transcend-info.com
   - DOMAIN-SUFFIX,netac.com
-
 # Принтеры и сканеры (Canon, Epson, Brother, Xerox)
   - DOMAIN-SUFFIX,canon.com
   - DOMAIN-SUFFIX,canon-europe.com
@@ -441,19 +458,20 @@ payload:
   - DOMAIN-SUFFIX,brother.com
   - DOMAIN-SUFFIX,brother.eu
   - DOMAIN-SUFFIX,xerox.com
-
 # Сетевое оборудование (TP-Link, MikroTik, Netgear)
   - DOMAIN-SUFFIX,tp-link.com
   - DOMAIN-SUFFIX,tplinkwifi.net
   - DOMAIN-SUFFIX,mikrotik.com
   - DOMAIN-SUFFIX,netgear.com
-
+  - DOMAIN-SUFFIX,broadcom.com
+  - DOMAIN-SUFFIX,vmware.com
+  - DOMAIN-SUFFIX,qualcomm.com
+  - DOMAIN-SUFFIX,mediatek.com
 # Ноутбуки и мониторы (Huawei, Honor, Xiaomi)
   - DOMAIN-SUFFIX,huawei.com
   - DOMAIN-SUFFIX,honor.com
   - DOMAIN-SUFFIX,mi.com
   - DOMAIN-SUFFIX,xiaomi.com
-
 # Геймерская периферия, звук и стриминг (Razer, Corsair, Elgato, SteelSeries, Focusrite, Logitech)
   - DOMAIN-SUFFIX,razer.com
   - DOMAIN-SUFFIX,razerzone.com
@@ -471,7 +489,6 @@ payload:
   - DOMAIN-SUFFIX,logitech.com
   - DOMAIN-SUFFIX,logi.com
   - DOMAIN-SUFFIX,logitechg.com
-
 # Мониторы, охлаждение, корпуса и БП (BenQ, ViewSonic, AOC, NZXT, be quiet!, Noctua, Seasonic, Fractal)
   - DOMAIN-SUFFIX,benq.com
   - DOMAIN-SUFFIX,viewsonic.com
@@ -492,7 +509,6 @@ payload:
   - DOMAIN-SUFFIX,montechpc.com
   - DOMAIN-SUFFIX,realtek.com
   - DOMAIN-SUFFIX,realtek.com.tw
-
 # HP, Dell, ASUS, Western Digital, Wacom
   - DOMAIN-SUFFIX,hp.com
   - DOMAIN-SUFFIX,hpe.com
@@ -509,7 +525,6 @@ payload:
   - DOMAIN-SUFFIX,wacom.com
   - DOMAIN-SUFFIX,wacom.eu
   - DOMAIN-KEYWORD,wacom
-
 # Sony & PlayStation (все сайты, сервисы, PSN и PS Store)
   - DOMAIN-SUFFIX,sony.com
   - DOMAIN-SUFFIX,sony.net
@@ -520,7 +535,6 @@ payload:
   - DOMAIN-SUFFIX,playstation.net
   - DOMAIN-SUFFIX,playstationnetwork.com
   - DOMAIN-KEYWORD,playstation
-
 # LG Electronics (Smart TV, веб-сервисы и магазины приложений)
   - DOMAIN-SUFFIX,lg.com
   - DOMAIN-SUFFIX,lge.com
@@ -532,7 +546,6 @@ payload:
   - DOMAIN-SUFFIX,kidc.net
   - DOMAIN-SUFFIX,uplus.co.kr
   - DOMAIN-KEYWORD,lge
-
 # ==============================================================================
 # 10. КРИПТОВАЛЮТЫ И ФИНАНСЫ (COINBASE, KRAKEN, TRADINGVIEW, BESTCHANGE, BYBIT)
 # ==============================================================================
@@ -546,7 +559,6 @@ payload:
   - DOMAIN-SUFFIX,coingecko.com
   - DOMAIN-SUFFIX,bybit.com
   - DOMAIN-SUFFIX,bybit.me
-
 # ==============================================================================
 # 11. НЕЗАВИСИМЫЕ СМИ, БИБЛИОТЕКИ, СТАТЬИ И БЛОКИРОВКИ РКН
 # ==============================================================================
@@ -560,7 +572,6 @@ payload:
   - DOMAIN-SUFFIX,sci-hub.se
   - DOMAIN-SUFFIX,sci-hub.st
   - DOMAIN-SUFFIX,sci-hub.ru
-
 # Независимые СМИ и информационные порталы
   - DOMAIN-SUFFIX,meduza.io
   - DOMAIN-SUFFIX,bbc.com
@@ -586,18 +597,15 @@ payload:
   - DOMAIN-SUFFIX,sibreal.org
   - DOMAIN-SUFFIX,severreal.org
   - DOMAIN-SUFFIX,idelreal.org
-
 # Популярные заблокированные ресурсы и сервисы
   - DOMAIN-SUFFIX,archive.org
   - DOMAIN-SUFFIX,waybackmachine.org
   - DOMAIN-SUFFIX,ntc.party
   - DOMAIN-SUFFIX,iherb.com
-
 # Файлообменники, пастбины и облачные хранилища
   - DOMAIN-SUFFIX,pastebin.com
   - DOMAIN-SUFFIX,mediafire.com
   - DOMAIN-SUFFIX,rapidgator.net
-
 # Хостинг, VPS и инфраструктура
   - DOMAIN-SUFFIX,hetzner.com
   - DOMAIN-SUFFIX,hetzner.cloud
@@ -606,14 +614,12 @@ payload:
   - DOMAIN-SUFFIX,linode.com
   - DOMAIN-SUFFIX,ovh.com
   - DOMAIN-SUFFIX,ovhcloud.com
-
 # VPN-порталы и зеркала загрузки клиентов
   - DOMAIN-SUFFIX,protonvpn.com
   - DOMAIN-SUFFIX,mullvad.net
   - DOMAIN-SUFFIX,windscribe.com
-
 # ==============================================================================
-# 12. 18+ СЕРВИСЫ (ПОЛНЫЙ СПИСОК С ЗЕРКАЛАМИ БЕЗ ТОРРЕНТОВ)
+# 12. 18+ СЕРВИСЫ
 # ==============================================================================
   - DOMAIN-SUFFIX,pornhub.com
   - DOMAIN-SUFFIX,phncdn.com
@@ -640,9 +646,8 @@ payload:
   - DOMAIN-SUFFIX,strpst.com
   - DOMAIN-SUFFIX,plab.site
   - DOMAIN-SUFFIX,e621.net
-
 # ==============================================================================
-# 13. ВАШИ ПЕРСОНАЛЬНЫЕ ДОМЕНЫ И СУФФИКСЫ ИЗ КОНФИГА
+# 13. ПЕРСОНАЛЬНЫЕ ДОМЕНЫ И СУФФИКСЫ ИЗ КОНФИГА
 # ==============================================================================
   - DOMAIN-SUFFIX,sws-extension.org
   - DOMAIN-SUFFIX,zipjpg.com
