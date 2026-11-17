@@ -17,7 +17,6 @@ payload:
 # 12. 18+ сервисы (Pornhub, xHamster, xVideos, XNXX, Beeg, Kemono)
 # 13. Ваши персональные домены и суффиксы
 # ==============================================================================
-
 # ==============================================================================
 # 0. СЛУЖЕБНЫЕ IP-ЧЕКЕРЫ, ГЕОЛОКАЦИЯ И АНТИФРОД ДЛЯ САЙТОВ И СТРИМИНГОВ
 # Точечные API, через которые сервисы из этого списка (Netflix, Microsoft, Adobe,
@@ -26,7 +25,6 @@ payload:
 # Netflix / LexisNexis ThreatMetrix (детекция VPN и проверка IP для Netflix)
   - DOMAIN-SUFFIX,online-metrix.net
   - DOMAIN-SUFFIX,threatmetrix.com
-
 # Microsoft Location & Fraud Protection (проверка геолокации Windows и Store)
   - DOMAIN,location.microsoft.com
   - DOMAIN,fpt2.microsoft.com
@@ -34,7 +32,6 @@ payload:
   - DOMAIN-SUFFIX,msauth.net
   - DOMAIN-SUFFIX,msftauth.net
   - DOMAIN-SUFFIX,microsoft-tst.com
-
 # Adobe & Autodesk Genuine Check (проверка региона лицензии и блокировок РФ)
   - DOMAIN,genuine.adobe.com
   - DOMAIN,genuine-software.autodesk.com
@@ -43,14 +40,12 @@ payload:
   - DOMAIN-SUFFIX,photoshop.com
   - DOMAIN-SUFFIX,ftcdn.net
   - DOMAIN-KEYWORD,adobe
-
 # DataDome, Sift & Fingerprint (детекция IP/VPN для криптобирж и веб-сервисов)
   - DOMAIN-SUFFIX,datadome.co
   - DOMAIN-SUFFIX,sift.com
   - DOMAIN-SUFFIX,siftscience.com
   - DOMAIN-SUFFIX,fingerprint.com
   - DOMAIN-SUFFIX,fpjs.io
-
 # Служебные IP/GeoIP API и согласие OneTrust (опрашиваются Netflix, биржами и платформами)
   - DOMAIN-SUFFIX,ipinfo.io
   - DOMAIN-SUFFIX,ip-api.com
@@ -59,17 +54,14 @@ payload:
   - DOMAIN-SUFFIX,maxmind.com
   - DOMAIN-SUFFIX,onetrust.com
   - DOMAIN-SUFFIX,cookielaw.org
-
 # Защитные капчи и Cloudflare Turnstile сайтов
   - DOMAIN,challenges.cloudflare.com
   - DOMAIN-SUFFIX,turnstile.cloudflare.com
   - DOMAIN-SUFFIX,hcaptcha.com
   - DOMAIN-SUFFIX,recaptcha.net
-
 # WebRTC STUN (защита от утечки реального IP при просмотре медиа)
   - DOMAIN,stun.cloudflare.com
   - DOMAIN,stun.services.mozilla.com
-
 # ==============================================================================
 # 1. СТРИМИНГИ, ОНЛАЙН-КИНОТЕАТРЫ И АНИМЕ (NETFLIX / HDREZKA / KINOPUB / FILMIX)
 # ==============================================================================
@@ -84,11 +76,9 @@ payload:
   - DOMAIN-SUFFIX,netflixinvestor.com
   - DOMAIN-SUFFIX,netflixtechblog.com
   - DOMAIN-SUFFIX,fast.com
-
 # Crunchyroll (аниме-стриминг и плеер)
   - DOMAIN-SUFFIX,crunchyroll.com
   - DOMAIN-SUFFIX,vrv.co
-
 # HDRezka / Rezka (все официальные зеркала и стрим-серверы)
   - DOMAIN-SUFFIX,hdrezka.ag
   - DOMAIN-SUFFIX,hdrezka.me
@@ -96,11 +86,9 @@ payload:
   - DOMAIN-SUFFIX,rezkify.com
   - DOMAIN-SUFFIX,streamguard.cc
   - DOMAIN-SUFFIX,voidboost.net
-
 # Kinopub (сервис, API и плееры)
   - DOMAIN-SUFFIX,kino.pub
   - DOMAIN-SUFFIX,kinopub.me
-
 # Filmix, LostFilm & Lordfilm
   - DOMAIN-SUFFIX,filmix.biz
   - DOMAIN-SUFFIX,filmix.ac
@@ -110,7 +98,6 @@ payload:
   - DOMAIN-SUFFIX,lostfilm.today
   - DOMAIN-SUFFIX,lordfilm.fun
   - DOMAIN-SUFFIX,lordfilm.cx
-
 # Популярные аниме-порталы и плееры
   - DOMAIN-SUFFIX,animego.org
   - DOMAIN-SUFFIX,animego.me
@@ -120,7 +107,6 @@ payload:
   - DOMAIN-SUFFIX,anilibria.tv
   - DOMAIN-SUFFIX,anilibria.top
   - DOMAIN-SUFFIX,sovetromantica.com
-
 # ==============================================================================
 # 2. TIKTOK & BYTEDANCE & CAPCUT (ПОЛНЫЙ НАБОР С ЭФФЕКТАМИ И CDN)
 # ==============================================================================
@@ -158,7 +144,6 @@ payload:
   - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,musical.ly
   - DOMAIN-KEYWORD,tiktok
-
 # ==============================================================================
 # 3. MICROSOFT (ПОЛНЫЙ НАБОР: WINDOWS UPDATE, АКТИВАЦИЯ, 365, TEAMS, AZURE)
 # ==============================================================================
@@ -181,7 +166,6 @@ payload:
   - DOMAIN-SUFFIX,msocdn.com
   - DOMAIN-SUFFIX,visualstudio.com
   - DOMAIN-SUFFIX,windows.net
-
 # ==============================================================================
 # 4. ADOBE (CREATIVE CLOUD, PHOTOSHOP, ILLUSTRATOR, АКТИВАЦИЯ И CDN)
 # ==============================================================================
@@ -194,7 +178,6 @@ payload:
   - DOMAIN-SUFFIX,typekit.net
   - DOMAIN-SUFFIX,behance.net
   - DOMAIN-SUFFIX,adobestock.com
-
 # ==============================================================================
 # 5. AUTODESK (AUTOCAD, 3DS MAX, MAYA, ЛИЦЕНЗИИ И ОБЛАКО)
 # ==============================================================================
@@ -202,39 +185,41 @@ payload:
   - DOMAIN-SUFFIX,autodesk360.com
   - DOMAIN-SUFFIX,autocad.com
   - DOMAIN-SUFFIX,tinkercad.com
-
 # ==============================================================================
 # 6. РАЗРАБОТКА, IDE И ВЕНДОРЫ СОФТА (JETBRAINS, DOCKER, ORACLE, ATLASSIAN)
 # ==============================================================================
 # JetBrains (PyCharm, WebStorm, IDEA, CLion, Rider, DataGrip, плагины)
-  - DOMAIN-SUFFIX,jetbrains.com
-  - DOMAIN-SUFFIX,jetbrains.org
-  - DOMAIN-SUFFIX,jetbrains.net
   - DOMAIN-SUFFIX,datalore.io
-  - DOMAIN-SUFFIX,kotlinlang.org
+  - DOMAIN-SUFFIX,grazie.ai
+  - DOMAIN-SUFFIX,intellij.com
   - DOMAIN-SUFFIX,intellij.net
-
+  - DOMAIN-SUFFIX,intellij.org
+  - DOMAIN-SUFFIX,jetbrains.ai
+  - DOMAIN-SUFFIX,jetbrains.com
+  - DOMAIN-SUFFIX,jetbrains.io
+  - DOMAIN-SUFFIX,jetbrains.net
+  - DOMAIN-SUFFIX,jetbrains.org
+  - DOMAIN-SUFFIX,jetbrains.space
+  - DOMAIN-SUFFIX,jetbrains.team
+  - DOMAIN-SUFFIX,kotlinconf.com
+  - DOMAIN-SUFFIX,kotlinlang.org
 # Docker & Реестры контейнеров
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
-
 # Oracle, Java & VirtualBox
   - DOMAIN-SUFFIX,oracle.com
   - DOMAIN-SUFFIX,java.com
   - DOMAIN-SUFFIX,virtualbox.org
-
 # Atlassian (Jira, Confluence, Trello, Bitbucket)
   - DOMAIN-SUFFIX,atlassian.com
   - DOMAIN-SUFFIX,atlassian.net
   - DOMAIN-SUFFIX,trello.com
   - DOMAIN-SUFFIX,bitbucket.org
-
 # Git-хостинги и платформы разработки
   - DOMAIN-SUFFIX,gitlab.com
   - DOMAIN-SUFFIX,sourceforge.net
   - DOMAIN-SUFFIX,pypi.org
   - DOMAIN-SUFFIX,pythonhosted.org
-
   - DOMAIN-SUFFIX,protonvpn.com
   - DOMAIN-SUFFIX,quay.io
   - DOMAIN-SUFFIX,gcr.io
@@ -248,31 +233,26 @@ payload:
   - DOMAIN-SUFFIX,notion-static.com
   - DOMAIN-SUFFIX,notion.ai
   - DOMAIN-SUFFIX,notionusercontent.com
-
 # Figma & Miro
   - DOMAIN-SUFFIX,figma.com
   - DOMAIN-SUFFIX,figmasandbox.com
   - DOMAIN-SUFFIX,miro.com
   - DOMAIN-SUFFIX,mirostatic.com
-
 # Slack, Zoom & Canva
   - DOMAIN-SUFFIX,slack.com
   - DOMAIN-SUFFIX,slack-edge.com
   - DOMAIN-SUFFIX,zoom.us
   - DOMAIN-SUFFIX,zoomgov.com
   - DOMAIN-SUFFIX,canva.com
-
 # Proton & Безопасная почта
   - DOMAIN-SUFFIX,proton.me
   - DOMAIN-SUFFIX,protonmail.com
   - DOMAIN-SUFFIX,tuta.com
   - DOMAIN-SUFFIX,tutanota.com
-
 # Облачные хранилища
   - DOMAIN-SUFFIX,dropbox.com
   - DOMAIN-SUFFIX,dropboxstatic.com
   - DOMAIN-SUFFIX,box.com
-
 # ==============================================================================
 # 8. ЗАРУБЕЖНЫЕ СОЦСЕТИ, СООБЩЕСТВА И ЗНАКОМСТВА (PINTEREST / TINDER)
 # ==============================================================================
@@ -280,7 +260,6 @@ payload:
   - DOMAIN-SUFFIX,pinterest.com
   - DOMAIN-SUFFIX,pinimg.com
   - DOMAIN-SUFFIX,tumblr.com
-
 # Альтернативные соцсети и форумы
   - DOMAIN-SUFFIX,bsky.app
   - DOMAIN-SUFFIX,bsky.social
@@ -293,7 +272,6 @@ payload:
   - DOMAIN-SUFFIX,sc-cdn.net
   - DOMAIN-SUFFIX,4pda.to
   - DOMAIN-SUFFIX,ru-board.com
-
 # Дейтинг-сервисы
   - DOMAIN-SUFFIX,tinder.com
   - DOMAIN-SUFFIX,gotinder.com
@@ -302,7 +280,6 @@ payload:
   - DOMAIN-SUFFIX,pure.app
   - DOMAIN-SUFFIX,hornet.com
   - DOMAIN-SUFFIX,meetme.com
-
 # Авторские платформы и блоги
   - DOMAIN-SUFFIX,patreon.com
   - DOMAIN-SUFFIX,patreonusercontent.com
@@ -319,7 +296,6 @@ payload:
   - DOMAIN-SUFFIX,fastpic.org
   - DOMAIN-SUFFIX,fastpic.ru
   - DOMAIN-SUFFIX,backblazeb2.com
-
 # ==============================================================================
 # 9. ЖЕЛЕЗО, ДРАЙВЕРЫ И ПРОИЗВОДИТЕЛИ ПК (INTEL, AMD, NVIDIA, ASUS, HP, DELL)
 # ==============================================================================
@@ -345,13 +321,73 @@ payload:
   - DOMAIN-SUFFIX,pentium.com
   - DOMAIN-SUFFIX,thunderbolttechnology.net
   - DOMAIN-KEYWORD,intel
-
 # AMD & NVIDIA (драйверы Adrenalin, GeForce Experience, Studio)
   - DOMAIN-SUFFIX,amd.com
   - DOMAIN-SUFFIX,amd.com.cn
-  - DOMAIN-SUFFIX,nvidia.com
+  - DOMAIN-SUFFIX,amdfanstore.com
+  - DOMAIN-SUFFIX,radeon.com
+  - DOMAIN-SUFFIX,geforce.cn
+  - DOMAIN-SUFFIX,geforce.co.kr
+  - DOMAIN-SUFFIX,geforce.co.uk
   - DOMAIN-SUFFIX,geforce.com
+  - DOMAIN-SUFFIX,geforce.com.tw
+  - DOMAIN-SUFFIX,gputechconf.cn
+  - DOMAIN-SUFFIX,gputechconf.co.kr
+  - DOMAIN-SUFFIX,gputechconf.com
+  - DOMAIN-SUFFIX,gputechconf.com.au
+  - DOMAIN-SUFFIX,gputechconf.com.tw
+  - DOMAIN-SUFFIX,gputechconf.eu
+  - DOMAIN-SUFFIX,gputechconf.in
+  - DOMAIN-SUFFIX,gputechconf.jp
+  - DOMAIN-SUFFIX,nvda.d2.sc.omtrdc.net
+  - DOMAIN-SUFFIX,nvidia.asia
+  - DOMAIN-SUFFIX,nvidia.at
+  - DOMAIN-SUFFIX,nvidia.be
+  - DOMAIN-SUFFIX,nvidia.ch
+  - DOMAIN-SUFFIX,nvidia.cn
+  - DOMAIN-SUFFIX,nvidia.co.at
+  - DOMAIN-SUFFIX,nvidia.co.in
+  - DOMAIN-SUFFIX,nvidia.co.jp
+  - DOMAIN-SUFFIX,nvidia.co.kr
+  - DOMAIN-SUFFIX,nvidia.co.uk
+  - DOMAIN-SUFFIX,nvidia.com
+  - DOMAIN-SUFFIX,nvidia.com.au
+  - DOMAIN-SUFFIX,nvidia.com.br
+  - DOMAIN-SUFFIX,nvidia.com.mx
+  - DOMAIN-SUFFIX,nvidia.com.pe
+  - DOMAIN-SUFFIX,nvidia.com.pl
+  - DOMAIN-SUFFIX,nvidia.com.tr
+  - DOMAIN-SUFFIX,nvidia.com.tw
+  - DOMAIN-SUFFIX,nvidia.com.ua
+  - DOMAIN-SUFFIX,nvidia.com.ve
+  - DOMAIN-SUFFIX,nvidia.cz
+  - DOMAIN-SUFFIX,nvidia.de
+  - DOMAIN-SUFFIX,nvidia.dk
+  - DOMAIN-SUFFIX,nvidia.es
+  - DOMAIN-SUFFIX,nvidia.eu
+  - DOMAIN-SUFFIX,nvidia.fi
+  - DOMAIN-SUFFIX,nvidia.fr
+  - DOMAIN-SUFFIX,nvidia.in
+  - DOMAIN-SUFFIX,nvidia.it
+  - DOMAIN-SUFFIX,nvidia.jp
+  - DOMAIN-SUFFIX,nvidia.lu
+  - DOMAIN-SUFFIX,nvidia.mx
+  - DOMAIN-SUFFIX,nvidia.nl
+  - DOMAIN-SUFFIX,nvidia.no
+  - DOMAIN-SUFFIX,nvidia.pl
+  - DOMAIN-SUFFIX,nvidia.ro
+  - DOMAIN-SUFFIX,nvidia.ru
+  - DOMAIN-SUFFIX,nvidia.se
+  - DOMAIN-SUFFIX,nvidia.tt.omtrdc.net
+  - DOMAIN-SUFFIX,nvidia.tw
+  - DOMAIN-SUFFIX,nvidiaforhp.com
   - DOMAIN-SUFFIX,nvidiagrid.net
+  - DOMAIN-SUFFIX,shotwithgeforce.com
+  - DOMAIN-SUFFIX,tegrazone.co
+  - DOMAIN-SUFFIX,tegrazone.co.kr
+  - DOMAIN-SUFFIX,tegrazone.com
+  - DOMAIN-SUFFIX,tegrazone.jp
+  - DOMAIN-SUFFIX,tegrazone.kr
 
 # ПК, ноутбуки и материнские платы (MSI, Acer, Lenovo, Gigabyte, ASRock)
   - DOMAIN-SUFFIX,msi.com
