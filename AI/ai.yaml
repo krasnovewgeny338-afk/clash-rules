@@ -91,6 +91,8 @@ payload:
   - DOMAIN-SUFFIX,clarity.ms
   - DOMAIN,in.appcenter.ms
   - DOMAIN,app.adjust.com
+  - DOMAIN-SUFFIX,net.coffee
+  - DOMAIN-SUFFIX,ip.net.coffee
 # ==============================================================================
 # 5. АВТОРИЗАЦИЯ, АККАУНТЫ И SSO (GOOGLE / MICROSOFT / APPLE / AUTH0)
 # Предотвращает получение сессионных токенов с меткой региона RU (gl=RU)
