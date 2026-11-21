@@ -14,7 +14,6 @@ payload:
 # - Моды, утилиты и рипперы FLAC (SpotiFLAC, Mornye, SpotX, Spicetify, Spotbye)
 # БЕЗ опасных глобальных перехватов всего Akamai/Fastly и БЕЗ сбоев на роутерах!
 # ==============================================================================
-
 # ==============================================================================
 # 1. SPOTIFY: АВТОРИЗАЦИЯ, САЙТ И СЕРВИСНЫЕ ССЫЛКИ
 # ==============================================================================
@@ -34,7 +33,6 @@ payload:
   - DOMAIN-SUFFIX,spotifynewsroom.jp
   - DOMAIN-KEYWORD,spotify
   - DOMAIN-SUFFIX,spotify.link
-
 # ==============================================================================
 # 2. SPOTIFY: СЕРВЕРЫ АУДИОПОТОКОВ, ОБЛОЖКИ И БЕЗОПАСНЫЙ CDN
 # (Точечные поддомены Akamai/Fastly, исключающие перехват стороннего интернета)
@@ -53,7 +51,6 @@ payload:
   - DOMAIN,spotify.map.fastlylb.net
   - DOMAIN,cdn-spotify-experiments.conductrics.com
   - DOMAIN,b.scorecardresearch.com
-
 # ==============================================================================
 # 3. TIDAL (HI-FI И MASTER СТРИМИНГ)
 # ==============================================================================
@@ -61,7 +58,6 @@ payload:
   - DOMAIN-SUFFIX,tidalhifi.com
   - DOMAIN-SUFFIX,wimpmusic.com
   - DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com
-
 # ==============================================================================
 # 4. QOBUZ, DEEZER, SOUNDCLOUD, BEATPORT
 # ==============================================================================
@@ -69,23 +65,19 @@ payload:
   - DOMAIN-SUFFIX,qobuz.com
   - DOMAIN-SUFFIX,qobuz.net
   - DOMAIN-KEYWORD,qobuz
-
 # Deezer
   - DOMAIN-SUFFIX,deezer.com
   - DOMAIN-SUFFIX,dzcdn.net
-
 # SoundCloud
   - DOMAIN-SUFFIX,soundcloud.com
   - DOMAIN-SUFFIX,sndcdn.com
   - DOMAIN-SUFFIX,snd.sc
   - DOMAIN-SUFFIX,soundcloud.cloud
   - DOMAIN-SUFFIX,p-cdn.us
-
 # Beatport, Mixcloud, TuneIn
   - DOMAIN-SUFFIX,beatport.com
   - DOMAIN-SUFFIX,mixcloud.com
   - DOMAIN-SUFFIX,tunein.com
-
 # ==============================================================================
 # 5. BANDCAMP, ТЕКСТЫ ПЕСЕН (GENIUS/MUSIXMATCH) И ШАЗАМ
 # ==============================================================================
@@ -94,14 +86,12 @@ payload:
   - DOMAIN-SUFFIX,genius.com
   - DOMAIN-SUFFIX,musixmatch.com
   - DOMAIN-SUFFIX,shazam.com
-
 # ==============================================================================
 # 6. МЕТАДАННЫЕ И СКРОББЛИНГ
 # ==============================================================================
   - DOMAIN-SUFFIX,last.fm
   - DOMAIN-SUFFIX,musicbrainz.org
   - DOMAIN-SUFFIX,metabrainz.org
-
 # ==============================================================================
 # 7. МУЗЫКАЛЬНЫЙ ШЕРИНГ И АГРЕГАТОРЫ ССЫЛОК (SONGLINK / ODESLI)
 # ==============================================================================
@@ -110,24 +100,17 @@ payload:
   - DOMAIN-SUFFIX,album.link
   - DOMAIN-SUFFIX,artist.link
   - DOMAIN-SUFFIX,pods.link
-
 # ==============================================================================
 # 8. СЕТЕВОЙ УРОВЕНЬ, РОУТЕРЫ (OPENWRT) И АВТОРИЗАЦИЯ КЛИЕНТОВ
 # ==============================================================================
 # Фирменный порт Spotify Access Point Protocol (работает на роутерах вместо PROCESS-NAME)
   - DST-PORT,4070
-
-# Прямые Anycast IP Google Cloud для подключения клиентов Spotify (с no-resolve для роутеров)
-  - IP-CIDR,104.154.127.126/32,no-resolve
-  - IP-CIDR,35.186.224.47/32,no-resolve
-
 # Моды, спуфинг и утилиты
   - DOMAIN-KEYWORD,spotbye
   - DOMAIN-KEYWORD,spicetify
   - DOMAIN-KEYWORD,spotx
   - DOMAIN-SUFFIX,ipwho.is
   - DOMAIN-KEYWORD,ipwho
-
 # ==============================================================================
 # 9. УТИЛИТЫ СКАЧИВАНИЯ FLAC (SPOTIFLAC, MORNYE, SPOTIDOWNLOADER)
 # Полнофункциональная поддержка всех бэкендов, расширений и зеркал скачивания:
