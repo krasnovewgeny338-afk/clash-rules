@@ -261,12 +261,8 @@ payload:
   - DOMAIN-SUFFIX,bnetshopus.akamaized.net
   - DOMAIN-SUFFIX,firesidegatherings.com
 # Серверы авторизации Blizzard / Battle.net (Blackmatrix7 IP-CIDR)
-  - IP-CIDR,185.60.112.157/32,no-resolve
-  - IP-CIDR,185.60.112.158/32,no-resolve
-  - IP-CIDR,185.60.114.159/32,no-resolve
-  - IP-CIDR,24.105.30.129/32,no-resolve
-  - IP-CIDR,24.105.62.129/32,no-resolve
-  - IP-CIDR,137.221.105.2/32,no-resolve
+  - DST-PORT,1119
+  - DST-PORT,3724
 # Activision & Call of Duty & Демонвейр
   - DOMAIN-SUFFIX,activision.com
   - DOMAIN-SUFFIX,callofduty.com
