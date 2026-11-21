@@ -26,10 +26,10 @@ payload:
   - DOMAIN,stun.cloudflare.com
   - DOMAIN-SUFFIX,stun.twilio.com
   - DOMAIN-SUFFIX,stun.services.mozilla.com
-  - DOMAIN,stun.cloudflare.com
-  - DOMAIN,stun.services.mozilla.com
-  - DOMAIN,stun.l.google.com
-  - DOMAIN-SUFFIX,stunprotocol.org
+  - DST-PORT,3478
+  - DST-PORT,19302
+  - DST-PORT,19305
+  - DST-PORT,5349
 # ==============================================================================
 # 3. АНТИ-ДЕТЕКТ, БРАУЗЕРНЫЙ ФИНГЕРПРИНТ, CAPTCHA И АНТИФРОД
 # Сервисы проверки среды браузера, аппаратных отпечатков и капчи, встроенные в AI:
