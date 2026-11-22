@@ -122,23 +122,41 @@ payload:
 # ==============================================================================
 # 3. SONY PLAYSTATION (PSN, STORE, SIE, АВТОРИЗАЦИЯ И СТУДИИ)
 # ==============================================================================
+  # Сетевой уровень: ключевые порты PlayStation Network (STUN, NAT Type, голосовой чат, мультиплеер)
+  - DST-PORT,3478
+  - DST-PORT,3479
+  - DST-PORT,3480
+  # Безопасные ключевые слова консоли и экосистемы Sony PSN (0 коллизий)
+  - DOMAIN-KEYWORD,playstation
+  - DOMAIN-KEYWORD,sonyentertainmentnetwork
+  # Основные домены PSN, авторизация, магазин и облачные сервисы
   - DOMAIN-SUFFIX,playstation.com
   - DOMAIN-SUFFIX,playstation.net
   - DOMAIN-SUFFIX,playstationnetwork.com
-  - DOMAIN-SUFFIX,sonyentertainmentnetwork.com
-  - DOMAIN-SUFFIX,sie.com
-  - DOMAIN-SUFFIX,playstationstudios.com
-  - DOMAIN-SUFFIX,playstation.mobi
-  - DOMAIN-SUFFIX,playstation.co.jp
-  - DOMAIN-SUFFIX,playstation.co.uk
-  - DOMAIN-SUFFIX,playstation.eu
+  - DOMAIN-SUFFIX,playstationservice.com
+  - DOMAIN-SUFFIX,playstation.link
   - DOMAIN-SUFFIX,playstation-cloud.net
+  - DOMAIN-SUFFIX,sonyentertainmentnetwork.com
+  - DOMAIN-SUFFIX,sen.com
+  - DOMAIN-SUFFIX,sie.com
+  - DOMAIN-SUFFIX,scea.com
+  - DOMAIN-SUFFIX,sonyinteractive.com
+  - DOMAIN-SUFFIX,sonyinteractive.net
+  - DOMAIN-SUFFIX,playstationstudios.com
+  # Студии PlayStation Studios
   - DOMAIN-SUFFIX,naughtydog.com
   - DOMAIN-SUFFIX,insomniac.games
   - DOMAIN-SUFFIX,santamonicastudio.com
   - DOMAIN-SUFFIX,guerrilla-games.com
   - DOMAIN-SUFFIX,suckerpunch.com
   - DOMAIN-SUFFIX,bungie.net
+  - DOMAIN-SUFFIX,bungie.com
+  - DOMAIN-SUFFIX,bendstudio.com
+  - DOMAIN-SUFFIX,housemarque.com
+  - DOMAIN-SUFFIX,bluepointgames.com
+  - DOMAIN-SUFFIX,firesprite.com
+  - DOMAIN-SUFFIX,havenstudios.com
+  - DOMAIN-SUFFIX,valkyriestudios.com
 # ==============================================================================
 # 4. NINTENDO (ESHOP, SWITCH ONLINE, АККАУНТЫ, ИГРЫ И ЗЕРКАЛА)
 # ==============================================================================
@@ -185,23 +203,61 @@ payload:
 # ==============================================================================
 # 6. ELECTRONIC ARTS (EA APP, ORIGIN, APEX, BATTLEFIELD, FC 24/25, SIMS)
 # ==============================================================================
+  # Сетевой уровень: критичные порты матчей и серверов EA (Frostbite Tunnel, QoS, Blaze)
+  # ПОРТ 3659 (UDP/TCP) — жизненно необходим для матчей в Ultimate Team (Rivals, Champions, Rush)
+  - DST-PORT,3659
+  # ПОРТ 9988 — EA Blaze Server (матчмейкинг и лобби)
+  - DST-PORT,9988
+  # ПОРТ 17502 — EA QoS latency ping
+  - DST-PORT,17502
+  # ПОРТ 42124 — связь с серверами EA Game Data Centers
+  - DST-PORT,42124
+  # ПОРТ 3074 — стандартный консольный/ПК порт матчмейкинга и лобби
+  - DST-PORT,3074
+  # Безопасные уникальные брендовые ключевые слова EA, футбольной серии и франшиз
+  - DOMAIN-KEYWORD,easports
+  - DOMAIN-KEYWORD,battlefield
+  - DOMAIN-KEYWORD,needforspeed
+  - DOMAIN-KEYWORD,fifa
+  - DOMAIN-KEYWORD,fc24
+  - DOMAIN-KEYWORD,fc25
+  - DOMAIN-KEYWORD,fc26
+  # Основные домены экосистемы EA, Origin и авторизации
   - DOMAIN-SUFFIX,ea.com
   - DOMAIN-SUFFIX,origin.com
   - DOMAIN-SUFFIX,electronicarts.com
+  - DOMAIN-SUFFIX,eatechnology.com
+  - DOMAIN-SUFFIX,eaplay.com
+  - DOMAIN-SUFFIX,eaaccess.com
+  - DOMAIN-SUFFIX,eafc.com
+  - DOMAIN-SUFFIX,easports.com
+  - DOMAIN-SUFFIX,easportsfc.com
+  - DOMAIN-SUFFIX,ea-sports.com
+  - DOMAIN-SUFFIX,ea-cdn.com
   - DOMAIN-SUFFIX,ea.tt.omtrdc.net
-  - DOMAIN-SUFFIX,tiberiumalliances.com
+  - DOMAIN-SUFFIX,eaassets-a.akamaihd.net
+  - DOMAIN-SUFFIX,eaassets-b.akamaihd.net
+  - DOMAIN-SUFFIX,origin-a.akamaihd.net
+  - DOMAIN-SUFFIX,cloudsync-prod.s3.amazonaws.com
+  - DOMAIN-SUFFIX,tnt-ea.com
+  # Домены Ultimate Team (FUT / UT Web App, Companion, промо и статистика)
+  - DOMAIN-SUFFIX,futpromos.com
+  - DOMAIN-SUFFIX,futunited.com
+  - DOMAIN-SUFFIX,futbin.com
+  - DOMAIN-SUFFIX,futhead.com
+  - DOMAIN-SUFFIX,hutpromos.com
+  - DOMAIN-SUFFIX,eamobile.com
+  - DOMAIN-SUFFIX,swtor.com
+  - DOMAIN-SUFFIX,titanfall.com
+  - DOMAIN-SUFFIX,starwarsbattlefront.com
+  # Франшизы, студии и игры EA
+  - DOMAIN-SUFFIX,thesims.com
+  - DOMAIN-SUFFIX,simcity.com
   - DOMAIN-SUFFIX,bioware.com
   - DOMAIN-SUFFIX,respawn.com
   - DOMAIN-SUFFIX,dice.se
-  - DOMAIN-SUFFIX,eaplay.com
-  - DOMAIN-KEYWORD,origin
-  - DOMAIN-SUFFIX,eaassets-a.akamaihd.net
-  - DOMAIN-SUFFIX,origin-a.akamaihd.net
-  - DOMAIN-SUFFIX,cloudsync-prod.s3.amazonaws.com
   - DOMAIN-SUFFIX,playapex.com
-  - DOMAIN-SUFFIX,eatechnology.com
-  - DOMAIN-SUFFIX,thesims.com
-  - DOMAIN-SUFFIX,eafc.com
+  - DOMAIN-SUFFIX,apexlegends.com
   - DOMAIN-SUFFIX,anthemgame.com
   - DOMAIN-SUFFIX,anthemthegame.com
   - DOMAIN-SUFFIX,awayoutgame.com
@@ -213,6 +269,20 @@ payload:
   - DOMAIN-SUFFIX,frostbite.com
   - DOMAIN-SUFFIX,chillingo.com
   - DOMAIN-SUFFIX,capitalgames.com
+  - DOMAIN-SUFFIX,needforspeed.com
+  - DOMAIN-SUFFIX,masseffect.com
+  - DOMAIN-SUFFIX,masseffectarchives.com
+  - DOMAIN-SUFFIX,plantsvszombies.com
+  - DOMAIN-SUFFIX,popcap.com
+  - DOMAIN-SUFFIX,commandandconquer.com
+  - DOMAIN-SUFFIX,tiberiumalliances.com
+  - DOMAIN-SUFFIX,starwarsjedisurvivor.com
+  - DOMAIN-SUFFIX,starwarsfallenorder.com
+  - DOMAIN-SUFFIX,ittakestwogame.com
+  - DOMAIN-SUFFIX,hazelight.se
+  - DOMAIN-SUFFIX,codemasters.com
+  - DOMAIN-SUFFIX,criteriongames.com
+  - DOMAIN-SUFFIX,maxis.com
 # ==============================================================================
 # 7. UBISOFT (UBISOFT CONNECT, UPLAY, R6 SIEGE, XDEFIANT, ASSASSIN'S CREED)
 # ==============================================================================
@@ -350,10 +420,7 @@ payload:
   - DOMAIN-SUFFIX,everdalegame.com
   - DOMAIN-SUFFIX,floodrush.com
   - DOMAIN-KEYWORD,supercell
-
-# Боевые серверы и матчмейкинг матчей Supercell (Blackmatrix7 IP-CIDR)
-  - DOMAIN-SUFFIX,brawlstars.com
-  - DOMAIN-SUFFIX,brawlstarsgame.com
+# Боевые серверы и матчмейкинг матчей Supercell 
   - DST-PORT,9339
 # ==============================================================================
 # 12. HOYOVERSE & KURO GAMES (GENSHIN IMPACT, STAR RAIL, ZZZ, WUTHERING WAVES)
